@@ -23,20 +23,10 @@
   --fw-semi-bold: 600;
 
   /* Font sizes */
-  --fs-500: 2rem;
   --fs-400: 1.5rem;
   --fs-300: 1.25rem;
   --fs-200: 1rem;
   --fs-100: .913rem;
-}
-
-/* Responsive typography */
-/* 768px wide */
-@media (max-width: 48em) {
-  :root {
-    /* Font sizes */
-    --fs-500: 1.75rem;
-  }
 }
 
 /* ================= Html reset ================= */
@@ -80,7 +70,7 @@ html {
 .testimonial__box {
   width: 100%;
   color: var(--clr-primary-100);
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   position: relative;
   z-index: 1;
