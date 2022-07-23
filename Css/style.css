@@ -1,0 +1,201 @@
+/* ================= Google fonts link - Barlow semi condensed ================= */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* ================= Css variables ================= */
+:root {
+  /*=============== Colors ===============*/
+  /* Primary */
+  --clr-primary-900: hsl(263, 55%, 52%); 
+  --clr-primary-500: hsl(219, 29%, 14%);
+  --clr-primary-300: hsl(217, 19%, 35%);
+  --clr-primary-100:  hsl(0, 0%, 100%);
+
+  /* Neutral */
+  --clr-neutral-900: hsl(0, 0%, 81%);
+  --clr-neutral-100: hsl(210, 46%, 95%);
+
+  /*=============== Typography ===============*/
+  /* Fonts */
+  --body-ff: 'Barlow Semi Condensed', sans-serif;
+
+  /* Font weights */
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+
+  /* Font sizes */
+  --fs-500: 2rem;
+  --fs-400: 1.5rem;
+  --fs-300: 1.25rem;
+  --fs-200: 1rem;
+  --fs-100: .913rem;
+}
+
+/* Responsive typography */
+/* 768px wide */
+@media (max-width: 48em) {
+  :root {
+    /* Font sizes */
+    --fs-500: 1.75rem;
+  }
+}
+
+/* ================= Html reset ================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ================= Base styles ================= */
+
+body {
+  background: var(--clr-neutral-100);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--body-ff);
+  line-height: 1.1;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* ================= Testimonials section ================= */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-areas: 
+  'one one two three'
+  'four five five three';
+  column-gap: 2rem;
+  row-gap: 1.25rem;
+  padding: 1.25rem 0;
+}
+
+.testimonial__box {
+  width: 100%;
+  color: var(--clr-primary-100);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.quotation__marks {
+  position: absolute;
+  z-index: -1;
+  right: 15%;
+  top: 0;
+  width: 130px;
+}
+
+.testimonial__profile {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial__img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.testimonial__name {
+  font-size: var(--fs-300);
+  margin-bottom: .25rem;
+  display: block;
+  font-weight: var(--fw-medium);
+}
+
+.testimonial__profession {
+  opacity: .5;
+  font-size: var(--fs-100);
+  font-weight: var(--fw-medium);
+}
+
+.testimonial__headline {
+  margin-bottom: .75rem;
+  font-size: var(--fs-400);
+  line-height: 1.2;
+  font-weight: var(--fw-semi-bold);
+}
+
+.testimonial__text {
+  opacity: .7;
+  line-height: 1.4;
+  font-size: var(--fs-100);
+  font-weight: var(--fw-semi-bold);
+}
+
+/* ================= Special box classes ================= */
+.testimonials .testimonial__box:nth-child(1) {
+  grid-area: one;
+}
+
+.testimonials .testimonial__box:nth-child(1) .testimonial__img {
+  border: 2px solid var(--clr-primary-100);
+}
+
+.testimonials .testimonial__box:nth-child(2) {
+  grid-area: two;
+}
+
+.testimonials .testimonial__box:nth-child(3) {
+  grid-area: three;
+  color: var(--clr-primary-500);
+  box-shadow: 35px 35px 25px -1rem rgba(0, 0, 0, .075);
+}
+
+.testimonials .testimonial__box:nth-child(4) {
+  grid-area: four;
+  color: var(--clr-primary-500);
+  box-shadow: 35px 35px 25px -1rem rgba(0, 0, 0, .075);
+}
+
+.testimonials .testimonial__box:nth-child(5) {
+  grid-area: five;
+}
+
+.testimonials .testimonial__box:nth-child(5) .testimonial__img {
+  border: 2px solid var(--clr-primary-900);
+}
+
+/* ================= Media queries ================= */
+/* 1136px wide */
+@media (max-width: 71em) {
+  .testimonials {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'one one three'
+    'five five three'
+    'two two four';
+  }
+}
+
+/* 800px wide */
+@media (max-width: 50em) {
+  .testimonials {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    'one'
+    'one'
+    'two'
+    'four'
+    'five'
+    'five'
+    'three'
+    'three';
+  }
+
+  .quotation__marks {
+    right: 10px;
+  }
+}
