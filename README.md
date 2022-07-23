@@ -28,8 +28,8 @@ Desktop view             |  Mobile view
 
 ### Links
 
-- Solution URL: [Frontend mentor solution link](https://your-solution-url.com)
-- Live Site URL: [Deployed project link](https://your-live-site-url.com)
+- Solution URL: [Frontend mentor solution link](https://www.frontendmentor.io/solutions/testimonials-grid-section-made-with-using-html-and-css-MUv8IjZXCP)
+- Live Site URL: [Deployed project link](https://testimonals-section.netlify.app/)
 
 ## My process
 
